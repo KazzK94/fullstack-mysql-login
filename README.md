@@ -33,6 +33,7 @@ You need to change the values of the object passed to `mysql.createConnection({ 
 > It has been made like that because this project's intent is purely for learning purposes.
 > Once in production, it should be safely stored in a more secure way, such as http-only cookies.
 
+## Environment Variables
 > [!WARNING]
 > Both the database config and the secret key for bcrypt are hard-coded.
 > Once in production, this information should be stored in a .env file (as environment variables).
