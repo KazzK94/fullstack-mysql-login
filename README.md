@@ -18,8 +18,9 @@ VS Code extensions like "Live Preview" are an easy option.
 # Before using
 
 ## Installing modules
-It's important to run `npm install` (while inside `/backend`), so all dependencies get installed.
+It's important to run `npm install` (while inside `/backend`) before running the backend server, so all dependencies get installed.
 A 'node_modules' folder will be created with all the necessary dependencies and their own dependencies as well.
+This only needs to be done once, preferably right after cloning the repo.
 
 ## Database Config
 All database config is established in `/backend/services/db.js`.
