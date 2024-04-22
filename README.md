@@ -1,3 +1,20 @@
+# Using this project
+Both the client and the server need to be running independently.
+The backend uses the port 3000 by default.
+The frontend does not have its own server, so you'll have to run it yourself.
+
+## Running the Backend
+This is very easy. You just run `npm run dev` and... voilà! It works!
+
+> [!WARNING]
+> This will return an error if you havent installed the dependencies first.
+> Check the section "Before using > Installing Modules" below for more details.
+
+## Running the Frontend
+As mentioned earlier, you will need to create a server for the frontend to work.
+This is up to you. Any http server will work.
+VS Code extensions like "Live Preview" are an easy option.
+
 # Before using
 
 ## Installing modules
@@ -7,7 +24,6 @@ A 'node_modules' folder will be created with all the necessary dependencies and 
 ## Database Config
 All database config is established in `/backend/services/db.js`.
 You need to change the values of the object passed to `mysql.createConnection({ /* object is here */ })` so it contains your database's information.
-
 
 # Disclaimers
 

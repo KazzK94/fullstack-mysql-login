@@ -1,17 +1,7 @@
 
-# Conexión a la BD
-La conexión se crea en /services/db.
-La configuración se gestiona en este mismo archivo (por ahora).
+# Connecting to DB
+The connection is created in /services/db.js
+The config is managed in this same file (for now).
 
-## Cambios a futuro
-Se pretende cambiar para que la configuración se almacene en variables de entorno, utilizando la libreria 'dotenv'.
-
-
-# TEST PASSWORDS:
-kazz		-> 1234
-lissy 		-> 5678
-alflowsito	-> 9999
-itzi		-> 202122
-saiyancin	-> prrprr123
-TesteaDoor	-> contraseña
-final		-> 123
+## Future changes
+In the future, config should be handled through environment variables (using the library 'dotenv').
