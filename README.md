@@ -8,7 +8,7 @@ This is very easy. You just run `npm run dev` and... voilà! It works!
 
 > [!WARNING]
 > This will return an error if you havent installed the dependencies first.
-> Check the section "Before using > Installing Modules" below for more details.
+> Check the section "[Before using > Installing Modules](https://github.com/KazzK94/fullstack-mysql-login/blob/main/README.md#installing-modules)" below for more details.
 
 ## Running the Frontend
 As mentioned earlier, you will need to create a server for the frontend to work.
