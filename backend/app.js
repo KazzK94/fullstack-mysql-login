@@ -16,7 +16,6 @@ app.use(cors());
 // Routes
 app.use('/api/users', usersRoutes)
 
-
 // Start server listening at PORT
 const PORT = 3000
 app.listen(PORT, function (err) {

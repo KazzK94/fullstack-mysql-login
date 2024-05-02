@@ -1,5 +1,5 @@
 
-export default function Register() {
+export default function RegisterPage() {
 	const $registerPage = document.createElement('section')
 
 	const $pageTitle = document.createElement('h1')

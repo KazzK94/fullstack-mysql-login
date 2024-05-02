@@ -1,5 +1,5 @@
 
-export default function Home() {
+export default function HomePage() {
 	const $homePage = document.createElement('section');
 
 	const $pageTitle = document.createElement('h1')

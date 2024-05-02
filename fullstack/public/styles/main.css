@@ -1,0 +1,9 @@
+/* Estilos modo oscuro */
+:root {
+	--color-fondo: #333;
+	--color-texto: #fff;
+}
+body {
+	background-color: var(--color-fondo);
+	color: var(--color-texto);
+}

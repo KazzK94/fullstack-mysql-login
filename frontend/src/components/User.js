@@ -1,5 +1,5 @@
 
-export default function User(user) {
+export function User(user) {
 
 	const $userCard = document.createElement('article')
 

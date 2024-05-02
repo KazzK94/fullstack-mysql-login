@@ -1,32 +1,29 @@
 
-import Home from '../Home.js'
-import Login from '../Login.js'
-import Error404 from '../Error404.js'
-import Users from '../Users.js'
-import Register from '../Register.js'
+import HomePage from '../../pages/HomePage.js'
+import LoginPage from '../../pages/LoginPage.js'
+import UsersPage from '../../pages/UsersPage.js'
+import RegisterPage from '../../pages/RegisterPage.js'
+import Error404Page from '../../pages/Error404Page.js'
 
 export default async function Router() {
 
 	const hash = window.location.hash
 
-	console.log(hash)
-
 	if (!hash || hash === '#home') {
-		return Home()
+		return HomePage()
 	}
 	if (hash === '#login') {
-		return Login()
+		return LoginPage()
 	}
 
 	if (hash === '#register') {
-		return Register()
+		return RegisterPage()
 	}
 
 	if (hash === '#users') {
-		return await Users()
+		return await UsersPage()
 	}
 
-
-	return Error404()
+	return Error404Page()
 
 }

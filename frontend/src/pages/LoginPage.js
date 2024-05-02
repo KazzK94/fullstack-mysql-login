@@ -1,5 +1,6 @@
+import { request } from '../services/requests.js'
 
-export default function Login() {
+export default function LoginPage() {
 	const $loginPage = document.createElement('section')
 
 	const $pageTitle = document.createElement('h1')
@@ -13,7 +14,6 @@ export default function Login() {
 		<input id="username" name="username" type="text" />
 		<label for="password">Password</label>
 		<input id="password" name="password" type="password" />
-
 		<button>Log In</button>
 	`
 	$loginPage.appendChild($loginForm)
@@ -35,30 +35,23 @@ async function handleLoginFormSubmit(event) {
 		password: formData.get('password')
 	}
 
-	console.log(user)
-
 	if (!user.username || !user.password) {
 		alert('You have to fill all fields in the form.')
 		return
 	}
 
-	const res = await fetch('http://localhost:3000/api/users/login', {
-		method: 'POST',
-		body: JSON.stringify(user),
-		headers: { 'Content-Type': 'application/json' }
-	})
-
-	if (!res.ok) {
-		const error = await res.json()
+	try {
+		const { token } = await request('http://localhost:3000/api/users/login', {
+			headers: { 'Content-Type': 'application/json' },
+			method: 'POST',
+			body: JSON.stringify(user)
+		})
+		console.log({ message: 'Login successful!', token })
+		localStorage.setItem('token', token)
+		window.location.hash = '#'
+	} catch (error) {
 		console.error({ message: 'Error logging in.', error })
 		return alert(error.message)
 	}
 
-	const { token } = await res.json()
-
-	console.log({ message: 'Login successful!', token })
-
-	localStorage.setItem('jwt', token)
-
-	window.location.hash = '#'
 }
