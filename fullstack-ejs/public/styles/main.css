@@ -1,0 +1,77 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	max-width: none;
+	/* override for Water.css "max-width: 800px" */
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: #2af;
+}
+
+a:hover {
+	color: #18e;
+}
+
+.container {
+	max-width: 1280px;
+	margin-inline: auto;
+}
+
+/* * MAIN * */
+main {
+	padding-inline: 20px;
+}
+
+/* * NAVBAR * */
+.navbar-top {
+	width: 100%;
+	min-height: 4rem;
+	padding: 4px 8px;
+	background-color: #346a;
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid #fff;
+	font-size: 1.5em;
+
+	&>.container,
+	.left-side,
+	.right-side {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	& .logo {
+		cursor: pointer;
+	}
+
+	& .right-side {
+		display: flex;
+		gap: 24px;
+	}
+
+	& a {
+		color: #abc;
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			text-shadow: 0 0 1px beige;
+		}
+	}
+}
+
+/* * LOGIN FORM * */
+#loginForm #loginError:not(:empty) {
+	background-color: #511;
+	border: 2px solid #733;
+	width: fit-content;
+	padding: 0.5em 1em;
+	border-radius: 0.5em;
+}

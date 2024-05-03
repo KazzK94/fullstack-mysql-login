@@ -1,0 +1,19 @@
+<nav class="navbar-top">
+	<div class="container">
+		<div class="left-side">
+			<a href="/">
+				<img class="logo" src="/logo.png" alt="KazzSQL Logo">
+			</a>
+		</div>
+		<div class="right-side">
+			<% if (user) { %>
+				<strong><%= user.username %></strong>
+				<button id="logout">Log out</button>
+				<script src="/scripts/logout.js"></script>
+			<% } else { %>
+				<a href="/login">Log in</a>
+				<a href="/register">Register</a>
+			<% } %>
+		</div>
+	</div>
+</nav>

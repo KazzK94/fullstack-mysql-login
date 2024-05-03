@@ -2,18 +2,23 @@
 // - LIBRARIES -
 import express from 'express'
 import cors from 'cors'
+import cookieParser from 'cookie-parser'
 
 // - IMPORT ROUTES -
-import usersRoutes from "./routes/users.js"
+import usersRoutes from "./api/users.js"
 
 // Create the app from express
 const app = express()
 
-// Middlewares
-app.use(express.json())
-app.use(cors());
+// Static files enabled
+app.use(express.static('public'))
 
-// Routes
+// Middlewares
+app.use(express.json()) // Enable json parsing
+app.use(cors()); // Enable CORS for all routes
+app.use(cookieParser()) // Enable cookie parsing
+
+// Routes (API)
 app.use('/api/users', usersRoutes)
 
 // Start server listening at PORT

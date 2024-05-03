@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('../partials/head'); %>
+</head>
+
+<body>
+	<header>
+		<%- include('../partials/navbar'); %>
+	</header>
+
+	<main class="container">
+		<h1>
+			<%= title %>
+		</h1>
+
+		<form action="/api/users/register" method="POST">
+			<label for="username">Username</label>
+			<input id="username" name="username" type="text" />
+			<label for="password">Password</label>
+			<input id="password" name="password" type="password" />
+			<label for="email">E-mail</label>
+			<input id="email" name="email" type="email" />
+			<button>Register</button>
+		</form>
+	</main>
+</body>
+
+</html>
