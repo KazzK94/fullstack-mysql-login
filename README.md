@@ -8,7 +8,7 @@ This is very easy. You just run `npm run dev` and... voilà! It works!
 
 > [!WARNING]
 > This will return an error if you havent installed the dependencies first.
-> Check the section "Before using > Installing Modules" below for more details.
+> Check the section "[Before using > Installing Modules](https://github.com/KazzK94/fullstack-mysql-login/blob/main/README.md#installing-modules)" below for more details.
 
 ## Running the Frontend
 As mentioned earlier, you will need to create a server for the frontend to work.
@@ -18,8 +18,9 @@ VS Code extensions like "Live Preview" are an easy option.
 # Before using
 
 ## Installing modules
-It's important to run `npm install` (while inside `/backend`), so all dependencies get installed.
+It's important to run `npm install` (while inside `/backend`) before running the backend server, so all dependencies get installed.
 A 'node_modules' folder will be created with all the necessary dependencies and their own dependencies as well.
+This only needs to be done once, preferably right after cloning the repo.
 
 ## Database Config
 All database config is established in `/backend/services/db.js`.
