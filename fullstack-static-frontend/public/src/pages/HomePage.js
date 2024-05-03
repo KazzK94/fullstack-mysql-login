@@ -9,7 +9,10 @@ export default function HomePage() {
 	const $content = document.createElement('div')
 	$content.innerHTML = `
 		<h2>List of links</h2>
-		<a href="#users">Users (only available if logged)</a>
+		<ul>
+			<li><a href="#users">Users (only available if logged)</a></li>
+			<li><a href="/admin">Admin Panel (only available for logged admins)</a></li>
+		</ul>
 	`
 	$homePage.appendChild($content)
 
